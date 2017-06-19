@@ -3,9 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <!--<link rel="stylesheet" href="bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 </head>
 <body>
+    <form role="form">
+        <!--textarea表示文本域，rows表示行数，value表示初值-->
+        <input type="text" class="form-control">
+        <textarea class="form-control" rows="5">Hello</textarea>
 
+        <!--checkbox表示复选框-->
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="">
+                吃橘子
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="">
+                吃苹果
+            </label>
+        </div>
+
+        <!--radio表示单选框，checked表示默认选中状态，name="OptionsRadios"要给予相同的名字，保证在同一个里面-->
+        <div class="radio">
+            <label>
+                <input name="OptionsRadios" type="radio" checked>
+                男
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input name="OptionsRadios" type="radio" checked>
+                女
+            </label>
+        </div>
+
+        <!--select和option表示下拉列表，multiple表示全部都显示下拉的菜单-->
+        <select class="form-control">
+             <option>1</option>
+             <option>2</option>
+             <option>3</option>
+             <option>4</option>
+        </select>
+        <!--静态控件-->
+        <p class="form-control-static">请按照我的格式输入：110@qq.com</p>
+        <!--disabled表示禁用状态，redaonly表示只读状态-->
+    <input class="form-control" type="text" placeholder="hello" disabled>
+        <!--全局禁用状态可以用fieldset disabled-->
+        <fieldset disabled>
+            <input type="text" class="form-control">
+            <textarea class="form-control" rows="5">Hello</textarea>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    吃橘子
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    吃苹果
+                </label>
+            </div>
+            <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </fieldset>
+    </form>
+
+    <!--输入框的颜色表示状态：has-warning警告；has-success成功；has-error错误；has-feedback反馈-->
+    <form role="form">
+        <div class="form-group has-warning">
+            <label>用户名</label>
+            <input class="form-control" type="text">
+        </div>
+        <div class="form-group has-success">
+            <label>用户名</label>
+            <input class="form-control" type="text">
+        </div>
+        <div class="form-group has-error">
+            <label>用户名</label>
+            <input class="form-control" type="text">
+        </div>
+        <div class="form-group has-feedback">
+            <label>用户名</label>
+            <input class="form-control" type="text">
+        </div>
+
+        <!--输入框末端的图标表示状态，例如对勾，此时需要用网络版的bootstrap，第7行代码所示-->
+        <div class="form-group has-feedback has-feedback">
+            <label>用户名</label>
+            <input class="form-control" type="text">
+            <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+        </div>
+
+        <!--可以通过栅格来控制输入框的大小和位置-->
+        <div class="form-group col-xs-5">
+            <label>用户名</label>
+            <input class="form-control" type="text">
+        </div>
+    </form>
 </body>
 </html>
