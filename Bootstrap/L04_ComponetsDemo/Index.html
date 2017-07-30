@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="bootstrap.min.css" ref="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <!--字体图标,下来菜单,按钮组件,按钮式下拉菜单-->
-    
+    <!--字体图标,下拉菜单,按钮组件,按钮式下拉菜单-->
+    <div class="container">
+        <!--pull-right表示右对齐，如果加在button的class中则下拉的菜单会覆盖按钮-->
+        <div class="dropdown pull-right">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                下拉菜单
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                <!--dropdown-header给下拉菜单加上分类标题-->
+                <li role="presentation" class="dropdown-header">大写的一到四</li>
+                <li><a href="#" role="menuitem">一</a></li>
+                <li><a href="#" role="menuitem">二</a></li>
+                <li><a href="#" role="menuitem">三</a></li>
+                <li><a href="#" role="menuitem">四</a></li>
+                <li role="presentation" class="dropdown-header">小写的1到4</li>
+                <li><a href="#" role="menuitem">1</a></li>
+                <li><a href="#" role="menuitem">2</a></li>
+                <li><a href="#" role="menuitem">3</a></li>
+                <li><a href="#" role="menuitem">4</a></li>
+                <!--divider表示下拉菜单的分割线，disabled表示禁用下拉菜单项-->
+                <li role="presentation" class="divider"></li>
+                <li><a href="#" role="menuitem">a</a></li>
+                <li class="disabled"><a href="#" role="menuitem">b</a></li>
+                <li class="disabled><a href="#" role="menuitem">c</a></li>
+                <li><a href="#" role="menuitem">d</a></li>
+            </ul>
+        </div>
+    </div>
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
 </body>
 </html>
